@@ -1,0 +1,22 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-negra {
+  padding: 0 10px;
+  font-family: 'Dosis', sans-serif;
+  color: #F3F3F3;
+  background-color: #111;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-negra ul {
+  list-style: none;
+}
+
+.nav-negra ul li{
+  display: inline-block;
+}
