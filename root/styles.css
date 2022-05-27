@@ -109,6 +109,7 @@ nav ul li{
 }
 
 .titulo_nav ul {
+  padding: 0;
   color: #666;
   list-style: none;
   display: flex;
@@ -125,4 +126,96 @@ nav ul li{
   color: #3C2313;
   font-size: 40px;
   margin: 5px 0;
+}
+
+/* Section productos */
+
+.product_container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.product_card {
+  color:#3C2313;
+  text-align: center;
+  background-color: #FBFAF6;
+  border-radius: 5px;
+}
+
+.product_card h3, p {
+  margin: 5px 0;
+}
+
+.product_card p {
+  color: #F0A83E;
+  font-weight: bold;
+}
+
+/* Section Form */
+
+.form_container {
+  margin: auto;
+  margin-top: 100px;
+  width: 360px;
+}
+
+.form_container h3 {
+  color: #3C2313;
+  font-size: 2em;
+  text-align: center;
+}
+
+.form_container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form_container input[type="text"], input[type="email"] {
+  font-family: 'Roboto';
+  font-weight: lighter;
+  margin-top: 10px;
+  padding: 15px 20px;
+  background-color: #3C2313;
+  color: #FFF;
+  border: none;
+  border-radius: 15px;
+}
+
+.form_container input[type="text"]:focus, input[type="email"]:focus {
+  outline: none;
+}
+
+.form_container input[type="text"]::placeholder, input[type="email"]::placeholder {
+  color: #FFF;
+}
+
+.form_container input[type="text"]:first-child {
+  margin-top: 0;
+}
+
+.form_buttons {
+  margin: auto;
+  margin-top: 30px;
+}
+
+.form_buttons button {
+  background-color: #8A8787;
+}
+
+.form_buttons input[type="submit"] {
+  background-color: #F0A83E;
+}
+
+.form_buttons * {
+  width: 110px;
+  text-align: center;
+  font-size: 1em;
+  font-weight: normal;
+  color: #FFF;
+  border: none;
+  border-radius: 999px;
+  margin: 0 7px;
+  padding: 10px 0;
 }
