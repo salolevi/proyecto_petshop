@@ -1,3 +1,5 @@
+/* ETIQUETAS GENERALES */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -7,10 +9,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-/* HEADER */
+h1, h2 {
+  user-select: none;
+}
 
 a {
   text-decoration: none;
+}
+
+/* HEADER */
+
+#logo {
+  cursor: pointer;
 }
 
 .nav-negra {
@@ -31,29 +41,49 @@ a {
   padding: 0;
 }
 
-.nav-negra ul li{
+.nav-negra li{
   display: inline-block;
+  margin-left: 10px;
 }
 
 nav {
   font-family: 'Roboto', sans-serif;
-  padding: 10px 35px;
   font-weight: 300;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #F0A83E;
   color: #FFF;
+  padding: 0 30px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
   align-items: center;
+  margin: 0;
 }
 
 nav ul li{
   margin-left: 10px;
+}
+
+nav ul li a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFF;
+  display: inline-block;
+  padding: 20px 10px;
+  transition: opacity .3s ease, background-color .3s ease;
+}
+
+nav ul li a:visited {
+  color: #FFF;
+}
+
+nav ul li a:hover {
+  opacity: .8;
+  background-color: rgb(204, 144, 53);
 }
 
 /* BANNER */
@@ -99,6 +129,12 @@ nav ul li{
   padding: 15px 20px;
   border: none;
   border-radius: 5px;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+.anuncios button:hover {
+  transform: scale(1.1);
 }
 
 /* Titulo y Nav */
@@ -209,6 +245,7 @@ nav ul li{
 }
 
 .form_buttons * {
+  cursor: pointer;
   width: 110px;
   text-align: center;
   font-size: 1em;
@@ -218,4 +255,48 @@ nav ul li{
   border-radius: 999px;
   margin: 0 7px;
   padding: 10px 0;
+}
+
+/* Section Subscription */
+
+.sub-section {
+  background-color: #F0A83E;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 0 30px;
+}
+
+.sub-section__left {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  size: 20px;
+  gap: 10px;
+  color: #FFFF;
+}
+
+.sub-section__right {
+  flex-basis: 500px;
+  text-align: right;
+  flex-shrink: 1.5;
+}
+
+.sub-section__right input[type="submit"] {
+  background-color: #3C2313;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  color: #FFF;
+
+}
+
+.sub-section__right input[type="email"] {
+  background-color: #FFF;
+  color:#111;
+  width: 50%;
+}
+
+.sub-section__right input[type="email"]::placeholder {
+  color: #444;
 }
