@@ -413,6 +413,25 @@ a {
   font-size: 10px;
 }
 
+@media screen and (max-width: 910px) {
+  .sub-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sub-section__right {
+    flex-basis: max-content;
+    width: 75%;
+  }
+
+  .sub-section__right input[type="email"] {
+    flex-grow: 1;
+  }
+
+  .sub-section__right form {
+  }
+}
+
 @media screen and (max-width: 768px) {
   .nav {
     display: none;
@@ -444,7 +463,7 @@ a {
 
 }
 
-@media screen and (max-width: 581px) {
+@media screen and (max-width: 582px) {
   .contact {
     justify-content: center;
   }
