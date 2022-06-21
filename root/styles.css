@@ -46,7 +46,7 @@ a {
   margin-left: 10px;
 }
 
-nav {
+.nav {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   display: flex;
@@ -57,18 +57,18 @@ nav {
   padding: 0 30px;
 }
 
-nav ul {
+.nav ul {
   display: flex;
   list-style: none;
   align-items: center;
   margin: 0;
 }
 
-nav ul li{
+.nav ul li{
   margin-left: 10px;
 }
 
-nav ul li a {
+.nav ul li a {
   cursor: pointer;
   text-decoration: none;
   color: #FFF;
@@ -77,13 +77,55 @@ nav ul li a {
   transition: opacity .3s ease, background-color .3s ease;
 }
 
-nav ul li a:visited {
+.nav ul li a:visited {
   color: #FFF;
 }
 
-nav ul li a:hover {
+.nav ul li a:hover {
   opacity: .8;
   background-color: rgb(204, 144, 53);
+}
+
+.responsive-nav {
+  display: none;
+}
+
+.burger-container {
+  display: grid;
+  place-content: center;
+  height: 100%;
+  cursor: pointer;
+  padding: 0 3px;
+}
+
+.burger {
+  width: 40px;
+  height: 3px;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 2px rgba(255,255,255, .3);
+}
+
+.burger::before {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 3px;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 2px rgba(255,255,255, .3);
+  transform: translateY(-0.7rem);
+}
+
+.burger::after {
+  position: absolute;
+  content: '';
+  width: 40px;
+  height: 3px;
+  background-color: #eee;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 2px rgba(255,255,255, .3);
+  transform: translateY(0.7rem);
 }
 
 /* BANNER */
@@ -123,7 +165,7 @@ nav ul li a:hover {
 }
 
 .anuncios button {
-  font-weight: bold;
+  /* font-weight: bold; */
   background-color: #F0A83E;
   color: #FFF;
   padding: 15px 20px;
@@ -170,6 +212,7 @@ nav ul li a:hover {
   display: flex;
   justify-content: center;
   gap: 60px;
+  flex-wrap: wrap;
 }
 
 .product_card {
@@ -325,6 +368,7 @@ nav ul li a:hover {
   justify-content: space-between;
   padding: 10px 70px;
   color: #FFF;
+  flex-wrap: wrap-reverse;
 }
 
 .contactInfo-child {
@@ -367,4 +411,41 @@ nav ul li a:hover {
   font-weight: 500;
   margin: 0;
   font-size: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+  
+  .responsive-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 59px; 
+  }
+
+  .product_container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    align-items: center;
+  }
+
+  .anuncios {
+    margin-left: 15px;
+    text-align: right;
+  }
+
+  .anuncios h1 {
+    font-size: 1.8em;
+  }
+
+}
+
+@media screen and (max-width: 581px) {
+  .contact {
+    justify-content: center;
+  }
 }
